@@ -41,5 +41,10 @@
     "createdAt": "2023-05-31T15:13:31.683Z",
     "version": "6.3.0",
     "commit": "a942adeb868f1fe54b86e34cc4fc4ddb0601700d"
-  }
+  },
+  "description": "* [1. Consideraciones generales](#1-consideraciones-generales)\r * [2. Preámbulo](#2-preámbulo)\r * [3. Funcionalidades](#3-funcionalidades)\r * [4. Boilerplate](#4-boilerplate)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Pruebas](#6-pruebas)\r * [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)\r * [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)\r * [9. Objetivos de aprendizaje](#9-objetivos-de-aprendizaje)\r * [10. Funcionalidades opcionales](#10-funcionalidades-opcionales)",
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
 }

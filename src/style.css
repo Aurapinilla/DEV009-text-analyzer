@@ -1,0 +1,37 @@
+
+
+h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+ul {
+    columns: 2;
+    text-align: justify;
+    position:relative;
+        left: 200px;
+    
+}
+
+li {
+    margin: 10px;
+    border: 1.5px solid rebeccapurple;
+    border-style: groove;
+    padding: 8px;
+    width: fit-content;
+    list-style-type: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+div {
+    position: relative;
+    left: 455px;
+}
+
+button {
+    text-align: center;
+    margin-block: 20px;
+    margin-left: 555px;
+}
