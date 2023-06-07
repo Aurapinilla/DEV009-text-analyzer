@@ -13,16 +13,18 @@
 
   <ul>
 
-    <li id="palabras">Palabras:</li><div id="resultado1"></div>
-    <li id="caracteres">Caracteres:</li>
-    <li id="caracteresSinEspacio">Caracteres Sin Espacios:</li>
-    <li id="recuentoNum">Recuento Números:</li>
-    <li id="sumaNum">Suma Números:</li>
+    <li id="palabras">Palabras: <span id="resultado1">0</span></li>
+    <li id="caracteres">Caracteres: <span id="resultado2">0</span></li>
+    <li id="caracteresSinEspacio">Caracteres Sin Espacios: <span id="resultado3">0</span></li>
+    <li id="recuentoNum">Recuento Números: <span id="resultado4">0</span></li>
+    <li id="sumaNum">Suma Números: <span id="resultado5">0</span></li>
     <li id="longitud">Longitud Media Palabras:</li>
 
   </ul>
 
-    <div><textarea id="areatexto" rows="6" cols="40" placeholder="Escriba algo."></textarea></div>
+    <div class="texto">
+      <textarea id="areatexto" rows="6" cols="40" name = "areatexto" placeholder="Escriba algo."></textarea>
+    </div>
 
 <br><button id = "reset-button">Limpiar Métricas</button>
 </body>
