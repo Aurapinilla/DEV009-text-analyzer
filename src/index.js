@@ -1,24 +1,28 @@
 import analyzer from './analyzer.js';
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-const campoTexto = document.querySelector("#areatexto");
-
+const textArea = document.querySelector("#areatexto");
 
 function textAnalyzer(){
-    const texto = document.getElementById("areatexto").innerHTML;
-    const contarPalabras = analyzer.getWordCount(texto);
-    const contarCaracteres = analyzer.getCharacterCount(texto);
-    const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(texto);
-    const contarNumeros = analyzer.getNumberCount(texto);
-    const sumarNumeros = analyzer.getNumberSum(texto);
-
+    const text = document.getElementById("areatexto").value;
+    const contarPalabras = analyzer.getWordCount(text);
     document.getElementById("resultado1").innerHTML = contarPalabras;
+
+    const contarCaracteres = analyzer.getCharacterCount(text);
     document.getElementById("resultado2").innerHTML = contarCaracteres;
+
+
+    const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
+    const contarNumeros = analyzer.getNumberCount(text);
+    const sumarNumeros = analyzer.getNumberSum(text);
+    const promedioLongitud = analyzer.getAverageWordLength(text);
+
     document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
     document.getElementById("resultado4").innerHTML = contarNumeros;
     document.getElementById("resultado5").innerHTML = sumarNumeros;
+    document.getElementById("resultado6").innerHTML = promedioLongitud;
 }
-console.log(campoTexto.addEventListener("keyup", textAnalyzer));
+textArea.addEventListener("keyup", textAnalyzer);
 
 
 const resetBtn = document.querySelector("#reset-button");
@@ -29,7 +33,8 @@ function borrarMetricas(){
     document.getElementById("resultado2").innerHTML = "0";
     document.getElementById("resultado3").innerHTML = "0";
     document.getElementById("resultado4").innerHTML = "0";
+    document.getElementById("resultado5").innerHTML = "0";
+    document.getElementById("resultado6").innerHTML = "0";
 }
 
 resetBtn.addEventListener('click', borrarMetricas);
-
