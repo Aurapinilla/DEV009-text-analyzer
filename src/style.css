@@ -13,8 +13,8 @@ ul {
     background-color: #FEF1E6;
     text-align: center;
     padding-block: 10px;
-    margin-left:180px;
-    margin-right: 180px;
+    width: fit-content;
+    margin: 0 auto;
     
 }
 
@@ -61,5 +61,6 @@ footer {
     font-variant: small-caps;
     color: #301E03;
     text-align-last: right;
-    margin-right: 50px;
+    margin: auto 0;
+    background-color: #f5f1f1;
 }

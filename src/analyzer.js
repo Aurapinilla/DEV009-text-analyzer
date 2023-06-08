@@ -29,12 +29,12 @@ const analyzer = {
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const palabras = text.trim().split(/\s+/g);
-    let longitudPalabra = 0
-    for (const palabra of text){
-      longitudPalabra = longitudPalabra + palabras.length;
+    let wordLength = 0
+    for (let i = 0; i < (palabras.length); i++){
+      wordLength = wordLength + palabras[i].length;
+      console.log("palaras: ", palabras)
     }
-    console.log(longitudPalabra)
-    return longitudPalabra / palabras.length;
+    return Math.round((wordLength / palabras.length)*100)/100;
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
@@ -51,21 +51,22 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    console.log({ text });
-    let numeros = text.match(/\d+(\.\d+)?/g);
-    console.log({ numeros });
-    let suma = 0;
-      for (let i = 0; i < numeros.length; i++){
-        suma += parseInt(numeros[i]);
+    const palabras = text.trim().split(/\s+/g);
+    let cuentaNumeros = 0;
+    for (let i = 0; i < (palabras.length); i++){
+      if (!isNaN(palabras[i])){
+        cuentaNumeros = cuentaNumeros + parseInt(palabras[i]);
       }
-    return suma;  
+      }
+    return cuentaNumeros; 
+    
   },
 };
 
 export default analyzer;
 
 function isSpaceOrSymbol(caracter){
-  const spaceOrSymbols = "!\"#$%&/()=?¡,.-";
+  const spaceOrSymbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`¿¡{|}~ ';
   for (const symbolCaracter of spaceOrSymbols){
     const isSymbol = symbolCaracter === caracter;
     if (isSymbol){
@@ -76,7 +77,3 @@ function isSpaceOrSymbol(caracter){
 }
 
 
-/*function isNumber(caracterN){
-  const thisIsNumber = !isNaN;
-  return thisIsNumber;
-}*/
