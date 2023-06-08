@@ -40,7 +40,7 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     //La variable permite encontrar todos los números
     const palabras = text.trim().split(/\s+/g);
-    let cuentaNumeros = 0
+    let cuentaNumeros = 0;
     for (let i = 0; i < (palabras.length); i++){
       if (!isNaN(palabras[i])){
         cuentaNumeros++;
