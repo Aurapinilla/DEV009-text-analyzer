@@ -10,12 +10,21 @@ const analyzer = {
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    return text.length;
+    let cuentaCaracteres = 0
+    for (const caracter of text){
+      cuentaCaracteres++;
+    }
+    return cuentaCaracteres;
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-    const textoLimpio = text.replace( /\s/g, '' );
-    return textoLimpio.length; 
+    let cuentaCaracteres = 0
+    for (const caracter of text){
+      if (!isSpaceOrSymbol(caracter)) {
+        cuentaCaracteres++;
+      }
+    }
+    return cuentaCaracteres;
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
@@ -43,3 +52,14 @@ const analyzer = {
 };
 
 export default analyzer;
+
+function isSpaceOrSymbol(caracter){
+  const spaceOrSymbols = "!\"#$%&/()=?¡,.-";
+  for (const symbolCaracter of spaceOrSymbols){
+    const isSymbol = symbolCaracter === caracter;
+    if (isSymbol){
+      return true;
+    }
+  }
+  return false;  
+}

@@ -13,11 +13,13 @@ function textAnalyzer(){
 
 
     const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
+    document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
+    
     const contarNumeros = analyzer.getNumberCount(text);
     const sumarNumeros = analyzer.getNumberSum(text);
     const promedioLongitud = analyzer.getAverageWordLength(text);
 
-    document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
+    
     document.getElementById("resultado4").innerHTML = contarNumeros;
     document.getElementById("resultado5").innerHTML = sumarNumeros;
     document.getElementById("resultado6").innerHTML = promedioLongitud;
