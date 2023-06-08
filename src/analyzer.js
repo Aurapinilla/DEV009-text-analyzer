@@ -28,24 +28,26 @@ const analyzer = {
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    let palabras = text.trim().split(/\s+/);
-    let longitud = palabras.reduce((acc, curr) => acc + curr.length, 0);
-    return longitud / palabras.length || 0;
+    const palabras = text.trim().split(/\s+/g);
+    let longitudPalabra = 0
+    for (const palabra of text){
+      longitudPalabra = longitudPalabra + palabras.length;
+    }
+    console.log(longitudPalabra)
+    return longitudPalabra / palabras.length;
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     //La variable permite encontrar todos los números
-    const thisIsNumber = !isNaN(text.split(" "));
-    console.log("es numero: ", thisIsNumber);
+    const palabras = text.trim().split(/\s+/g);
     let cuentaNumeros = 0
-    for (const caracterN of text){
-      if (caracterN === thisIsNumber) {
+    for (let i = 0; i < (palabras.length); i++){
+      if (!isNaN(palabras[i])){
         cuentaNumeros++;
       }
     }
-    console.log("cuenta numero: ", cuentaNumeros);
-    return cuentaNumeros;
-    
+    return cuentaNumeros; 
+  
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
