@@ -35,8 +35,17 @@ const analyzer = {
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     //La variable permite encontrar todos los números
-    let numeros = text.match(/\d+(\.\d+)?/g);
-    return numeros ? numeros.length: 0;
+    const thisIsNumber = !isNaN(text.split(" "));
+    console.log("es numero: ", thisIsNumber);
+    let cuentaNumeros = 0
+    for (const caracterN of text){
+      if (caracterN === thisIsNumber) {
+        cuentaNumeros++;
+      }
+    }
+    console.log("cuenta numero: ", cuentaNumeros);
+    return cuentaNumeros;
+    
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
@@ -63,3 +72,9 @@ function isSpaceOrSymbol(caracter){
   }
   return false;  
 }
+
+
+/*function isNumber(caracterN){
+  const thisIsNumber = !isNaN;
+  return thisIsNumber;
+}*/
