@@ -11,7 +11,6 @@ function textAnalyzer(){
     const contarCaracteres = analyzer.getCharacterCount(text);
     document.getElementById("resultado2").innerHTML = contarCaracteres;
 
-
     const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
     document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
 
@@ -23,7 +22,7 @@ function textAnalyzer(){
 
     const promedioLongitud = analyzer.getAverageWordLength(text);
     document.getElementById("resultado6").innerHTML = promedioLongitud;
-    
+
 }
 textArea.addEventListener("keyup", textAnalyzer);
 
