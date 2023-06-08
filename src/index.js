@@ -14,15 +14,16 @@ function textAnalyzer(){
 
     const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
     document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
-    
-    const contarNumeros = analyzer.getNumberCount(text);
-    const sumarNumeros = analyzer.getNumberSum(text);
-    const promedioLongitud = analyzer.getAverageWordLength(text);
 
-    
+    const contarNumeros = analyzer.getNumberCount(text);
     document.getElementById("resultado4").innerHTML = contarNumeros;
+
+    const sumarNumeros = analyzer.getNumberSum(text);
     document.getElementById("resultado5").innerHTML = sumarNumeros;
+
+    const promedioLongitud = analyzer.getAverageWordLength(text);
     document.getElementById("resultado6").innerHTML = promedioLongitud;
+    
 }
 textArea.addEventListener("keyup", textAnalyzer);
 
