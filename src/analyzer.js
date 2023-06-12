@@ -11,7 +11,8 @@ const analyzer = {
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
     let cuentaCaracteres = 0
-    for (const caracter of text){
+    for (const caracter of text)
+    {
       cuentaCaracteres++;
     }
     return cuentaCaracteres;
@@ -20,7 +21,8 @@ const analyzer = {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
     let cuentaCaracteres = 0
     for (const caracter of text){
-      if (!isSpaceOrSymbol(caracter)) {
+      if (!isSpaceOrSymbol(caracter)) 
+      {
         cuentaCaracteres++;
       }
     }
@@ -30,9 +32,10 @@ const analyzer = {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const palabras = text.trim().split(/\s+/g);
     let wordLength = 0
-    for (let i = 0; i < (palabras.length); i++){
-      wordLength = wordLength + palabras[i].length;
-      console.log("palaras: ", palabras)
+    for (let i = 0; i < (palabras.length); i++)
+    {
+      wordLength += palabras[i].length;
+      console.log("palabras: ", palabras)
     }
     return Math.round((wordLength / palabras.length)*100)/100;
   },
@@ -41,8 +44,10 @@ const analyzer = {
     //La variable permite encontrar todos los números
     const palabras = text.trim().split(/\s+/g);
     let cuentaNumeros = 0;
-    for (let i = 0; i < (palabras.length); i++){
-      if (!isNaN(palabras[i])){
+    for (let i = 0; i < (palabras.length); i++)
+    {
+      if (!isNaN(palabras[i]))
+      {
         cuentaNumeros++;
       }
     }
@@ -53,11 +58,13 @@ const analyzer = {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
     const palabras = text.trim().split(/\s+/g);
     let cuentaNumeros = 0;
-    for (let i = 0; i < (palabras.length); i++){
-      if (!isNaN(palabras[i])){
-        cuentaNumeros = cuentaNumeros + parseInt(palabras[i]);
+    for (let i = 0; i < (palabras.length); i++)
+    {
+      if (!isNaN(palabras[i]))
+      {
+        cuentaNumeros += parseInt(palabras[i]);
       }
-      }
+    }
     return cuentaNumeros; 
     
   },
@@ -65,11 +72,14 @@ const analyzer = {
 
 export default analyzer;
 
-function isSpaceOrSymbol(caracter){
+function isSpaceOrSymbol(caracter)
+{
   const spaceOrSymbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`¿¡{|}~ ';
-  for (const symbolCaracter of spaceOrSymbols){
+  for (const symbolCaracter of spaceOrSymbols)
+  {
     const isSymbol = symbolCaracter === caracter;
-    if (isSymbol){
+    if (isSymbol)
+    {
       return true;
     }
   }

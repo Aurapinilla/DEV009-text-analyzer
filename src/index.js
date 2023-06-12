@@ -3,33 +3,41 @@ import analyzer from './analyzer.js';
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
 const textArea = document.querySelector("#areatexto");
 
-function textAnalyzer(){
+function textAnalyzer()
+{
     const text = document.getElementById("areatexto").value;
-    const contarPalabras = analyzer.getWordCount(text);
-    document.getElementById("resultado1").innerHTML = contarPalabras;
+    if ( text !== "")
+    {
+        const contarPalabras = analyzer.getWordCount(text);
+        document.getElementById("resultado1").innerHTML = contarPalabras;
 
-    const contarCaracteres = analyzer.getCharacterCount(text);
-    document.getElementById("resultado2").innerHTML = contarCaracteres;
+        const contarCaracteres = analyzer.getCharacterCount(text);
+        document.getElementById("resultado2").innerHTML = contarCaracteres;
 
-    const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
-    document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
+        const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
+        document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
 
-    const contarNumeros = analyzer.getNumberCount(text);
-    document.getElementById("resultado4").innerHTML = contarNumeros;
+        const contarNumeros = analyzer.getNumberCount(text);
+        document.getElementById("resultado4").innerHTML = contarNumeros;
 
-    const sumarNumeros = analyzer.getNumberSum(text);
-    document.getElementById("resultado5").innerHTML = sumarNumeros;
+        const sumarNumeros = analyzer.getNumberSum(text);
+        document.getElementById("resultado5").innerHTML = sumarNumeros;
 
-    const promedioLongitud = analyzer.getAverageWordLength(text);
-    document.getElementById("resultado6").innerHTML = promedioLongitud;
-
+        const promedioLongitud = analyzer.getAverageWordLength(text);
+        document.getElementById("resultado6").innerHTML = promedioLongitud;
+    } 
+    else 
+    {
+        borrarMetricas();
+    }
 }
 textArea.addEventListener("keyup", textAnalyzer);
 
 
 const resetBtn = document.querySelector("#reset-button");
 
-function borrarMetricas(){
+function borrarMetricas()
+{
     document.getElementById("areatexto").value = "";
     document.getElementById("resultado1").innerHTML = "0";
     document.getElementById("resultado2").innerHTML = "0";
