@@ -31,10 +31,6 @@ header {
     background-color: #f5f1f1;
 }
 
-span {
-    font-weight: bold;
-}
-
 textarea[name="user-input"]{
     margin-top: 10px;
     margin-left: 437px;

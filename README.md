@@ -88,8 +88,8 @@ clic en un botón.
 Este analizador de textos es una herramienta muy versatil que permite conocer características muy específicas sobre la estructura de un texto en tiempo real. 
 
 Como se menciona anteriormente, con este analizador conocerás:
-- El número de palabras,
-- El número total de caracteres,
+- El número de palabras
+- El número total de caracteres
 - El número de caracteres, el cual excluye los espacios y símbolos
 - El recuento de numeros
 - La suma de los numeros dentro del texto
