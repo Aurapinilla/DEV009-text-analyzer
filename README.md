@@ -83,7 +83,8 @@ clic en un botón.
 
 ![Text analyzer demo](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Text analyzer demo")
 
-**Explicación del Producto Final**
+**Explicación del Producto Final:**
+
 Este analizador de textos es una herramienta muy versatil que permite conocer características muy específicas sobre la estructura de un texto en tiempo real. 
 
 Como se menciona anteriormente, con este analizador conocerás:
