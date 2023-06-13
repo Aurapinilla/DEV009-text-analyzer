@@ -402,6 +402,12 @@ usuarias en el centro**
 
   - [ ] La estudiante creó prototipos de baja fidelidad para la UI (interfaz gŕafica).
 
+  **Prototipos**
+
+  - El primer prototipo de baja fidelidad desarrollado contiene la estructura básica en HTML, en este simplemente se muestra un boceto del orden en el que el contenido del analizador de textos se mostrará. 
+
+  [![Prototipo-1-TA.jpg](https://i.postimg.cc/yYftQfpG/Prototipo-1-TA.jpg)](https://postimg.cc/qz31gGTc)
+
 * **Seguir los principios básicos de diseño visual**
 
   - [ ] Se tuvieron en cuenta las reglas básica del
