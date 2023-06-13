@@ -83,6 +83,26 @@ clic en un botón.
 
 ![Text analyzer demo](https://github-production-user-asset-6210df.s3.amazonaws.com/12631491/240650556-988dcd6f-bc46-473b-894c-888a66c9fe2d.gif "Text analyzer demo")
 
+**Explicación del Producto Final**
+Este analizador de textos es una herramienta muy versatil que permite conocer características muy específicas sobre la estructura de un texto en tiempo real. 
+
+Como se menciona anteriormente, con este analizador conocerás:
+- El número de palabras,
+- El número total de caracteres,
+- El número de caracteres, el cual excluye los espacios y símbolos
+- El recuento de numeros
+- La suma de los numeros dentro del texto
+- La longitud media de las palabras
+
+Esta especialmente dirigido para el uso académico. Su uso es util por ejemplo e situaciones en las que se requiera revisar trabajos que tienen restricciones en cuanto al número de palabras, caracteres, etc., usando este analizador de textos podrás ahorrar mucho tiempo.
+
+Para darle uso solo haz click sobre el texto "Escribe algo...", esto activará la caja de texto donde podrás comenzar a escribir el texto deseado a analizar. Aquí podrás ver como las métricas se comienzan a actualizar en tiempo real, lo cual facilita el proceso. 
+
+Cuando hayas guardado las métricas oprime el boton “Limpiar métricas”, este borrará el texto que haz ingresado al igual que las métricas calculadas, devolviendolas a su valor original de 0. Ahora estás lista para usarlo nuevamente!
+
+[![Producto-final-en-uso.jpg](https://i.postimg.cc/2SVJP4PS/Producto-final-en-uso.jpg)](https://postimg.cc/FYXDSJrM)
+
+
 ## 4. Boilerplate
 
 La lógica del proyecto debe estar implementada completamente en JavaScript. En
@@ -407,6 +427,17 @@ usuarias en el centro**
   - El primer prototipo de baja fidelidad desarrollado contiene la estructura básica en HTML, en este simplemente se muestra un boceto del orden en el que el contenido del analizador de textos se mostrará. 
 
   [![Prototipo-1-TA.jpg](https://i.postimg.cc/yYftQfpG/Prototipo-1-TA.jpg)](https://postimg.cc/qz31gGTc)
+
+  - Posteriormente se comenzó a dar un poco de diseño en cuanto a la ubicación del contenido, centrándolo en la página para una mejor y más fácil visualización. 
+
+  [![prototipo-baja-fidelidad-TA.jpg](https://i.postimg.cc/ncVN1827/prototipo-baja-fidelidad-TA.jpg)](https://postimg.cc/0r3t8BL2)
+
+  - Debido a que este Analizador de Textos está orientado mayormente al uso académico, se buscó un balance en el diseño para que fuera atractivo, pero utilizando al mismo tiempo colores y estructuras neutras para mantener un aspecto serio.
+
+  Una vez que la estructura se veía adecuada continué con la elección de colores, dando mayor customización.
+
+  [![Producto-final.jpg](https://i.postimg.cc/050Lm5YP/Producto-final.jpg)](https://postimg.cc/mhhXWsp5)
+  Esta es la interface final!
 
 * **Seguir los principios básicos de diseño visual**
 
