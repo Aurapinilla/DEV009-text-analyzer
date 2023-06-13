@@ -8,27 +8,27 @@ function textAnalyzer()
     const text = document.getElementById("areatexto").value;
     if ( text !== "")
     {
-        const contarPalabras = analyzer.getWordCount(text);
-        document.getElementById("resultado1").innerHTML = contarPalabras;
+        const countWords = analyzer.getWordCount(text);
+        document.getElementById("resultado1").innerHTML = countWords;
 
-        const contarCaracteres = analyzer.getCharacterCount(text);
-        document.getElementById("resultado2").innerHTML = contarCaracteres;
+        const countCharacters = analyzer.getCharacterCount(text);
+        document.getElementById("resultado2").innerHTML = countCharacters;
 
-        const contarCaracteresSinEspacios = analyzer.getCharacterCountExcludingSpaces(text);
-        document.getElementById("resultado3").innerHTML = contarCaracteresSinEspacios;
+        const charactersNoSpaces = analyzer.getCharacterCountExcludingSpaces(text);
+        document.getElementById("resultado3").innerHTML = charactersNoSpaces;
 
-        const contarNumeros = analyzer.getNumberCount(text);
-        document.getElementById("resultado4").innerHTML = contarNumeros;
+        const countNumbers = analyzer.getNumberCount(text);
+        document.getElementById("resultado4").innerHTML = countNumbers;
 
-        const sumarNumeros = analyzer.getNumberSum(text);
-        document.getElementById("resultado5").innerHTML = sumarNumeros;
+        const sumNumbers = analyzer.getNumberSum(text);
+        document.getElementById("resultado5").innerHTML = sumNumbers;
 
-        const promedioLongitud = analyzer.getAverageWordLength(text);
-        document.getElementById("resultado6").innerHTML = promedioLongitud;
+        const averageLength = analyzer.getAverageWordLength(text);
+        document.getElementById("resultado6").innerHTML = averageLength;
     } 
     else 
     {
-        borrarMetricas();
+        resetMetrics();
     }
 }
 textArea.addEventListener("keyup", textAnalyzer);
@@ -36,7 +36,7 @@ textArea.addEventListener("keyup", textAnalyzer);
 
 const resetBtn = document.querySelector("#reset-button");
 
-function borrarMetricas()
+function resetMetrics()
 {
     document.getElementById("areatexto").value = "";
     document.getElementById("resultado1").innerHTML = "0";
@@ -47,4 +47,4 @@ function borrarMetricas()
     document.getElementById("resultado6").innerHTML = "0";
 }
 
-resetBtn.addEventListener('click', borrarMetricas);
+resetBtn.addEventListener('click', resetMetrics);
