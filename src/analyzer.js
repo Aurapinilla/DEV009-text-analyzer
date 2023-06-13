@@ -1,11 +1,9 @@
 const analyzer = {  
   getWordCount: (text) => {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    // let texto  = document.getElementById("areatexto").value;
     //Reemplaza varios espacios en blanco por 1
     const words = text.trim().split(/\s+/g);
     return words.length
-    //Quita el primer espacio en blaco
 
   },
   getCharacterCount: (text) => {
