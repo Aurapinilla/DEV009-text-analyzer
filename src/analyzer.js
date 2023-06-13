@@ -57,7 +57,7 @@ const analyzer = {
         numberCount += parseFloat(words[i]);
       }
     }
-    return numberCount.toFixed(2); 
+    return numberCount; 
     
   },
 };
