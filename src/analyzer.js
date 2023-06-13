@@ -8,18 +8,13 @@ const analyzer = {
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    let characterCount = 0
-    for (const caracter of text)
-    {
-      characterCount++;
-    }
-    return characterCount;
+    return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
     let characterCount = 0
-    for (const caracter of text){
-      if (!isSpaceOrSymbol(caracter)) 
+    for (const character of text){
+      if (!isSpaceOrSymbol(character)) 
       {
         characterCount++;
       }
@@ -33,7 +28,6 @@ const analyzer = {
     for (let i = 0; i < (words.length); i++)
     {
       wordLength += words[i].length;
-      console.log("palabras: ", words)
     }
     return Math.round((wordLength / words.length)*100)/100;
   },
@@ -54,28 +48,28 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    const palabras = text.trim().split(/\s+/g);
-    let cuentaNumeros = 0;
-    for (let i = 0; i < (palabras.length); i++)
+    const words = text.trim().split(/\s+/g);
+    let numberCount = 0;
+    for (let i = 0; i < (words.length); i++)
     {
-      if (!isNaN(palabras[i]))
+      if (!isNaN(words[i]))
       {
-        cuentaNumeros += parseInt(palabras[i]);
+        numberCount += parseInt(words[i]);
       }
     }
-    return cuentaNumeros; 
+    return numberCount; 
     
   },
 };
 
 export default analyzer;
 
-function isSpaceOrSymbol(caracter)
+function isSpaceOrSymbol(character)
 {
   const spaceOrSymbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`¿¡{|}~ ';
   for (const symbolCaracter of spaceOrSymbols)
   {
-    const isSymbol = symbolCaracter === caracter;
+    const isSymbol = symbolCaracter === character;
     if (isSymbol)
     {
       return true;
