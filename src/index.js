@@ -9,14 +9,14 @@ function textAnalyzer()
   const text = document.querySelector('textarea[name = "user-input"]').value;
   if ( text !== "")
   {
-    const countWords = "Palabras: " + analyzer.getWordCount(text);
-    lists[0].innerHTML = countWords;
-
     const countCharacters = "Caracteres: " + analyzer.getCharacterCount(text);
-    lists[1].innerHTML = countCharacters;
+    lists[0].innerHTML = countCharacters;
 
     const charactersNoSpaces = "Caracteres Sin Espacios: " + analyzer.getCharacterCountExcludingSpaces(text);
-    lists[2].innerHTML = charactersNoSpaces;
+    lists[1].innerHTML = charactersNoSpaces;
+
+    const countWords = "Palabras: " + analyzer.getWordCount(text);
+    lists[2].innerHTML = countWords;
 
     const countNumbers = "Recuento Números: " + analyzer.getNumberCount(text);
     lists[3].innerHTML = countNumbers;
@@ -35,14 +35,14 @@ function textAnalyzer()
 textArea.addEventListener("keyup", textAnalyzer);
 
 
-const resetBtn = document.querySelector("#reset-button");
+const resetBtn = document.getElementById("reset-button");
 
 function resetMetrics()
 {
   document.querySelector('textarea[name = "user-input"]').value = "";
-  lists[0].innerHTML = "Palabras: 0";
-  lists[1].innerHTML = "Caracteres: 0";
-  lists[2].innerHTML = "Caracteres Sin Espacios: 0";
+  lists[0].innerHTML = "Caracteres: 0";
+  lists[1].innerHTML = "Caracteres Sin Espacios: 0";
+  lists[2].innerHTML = "Palabras: 0";
   lists[3].innerHTML = "Recuento Números: 0";
   lists[4].innerHTML = "Suma Números: 0";
   lists[5].innerHTML = "Longitud Media Palabras: 0";
