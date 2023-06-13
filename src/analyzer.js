@@ -54,10 +54,10 @@ const analyzer = {
     {
       if (!isNaN(words[i]))
       {
-        numberCount += parseInt(words[i]);
+        numberCount += parseFloat(words[i]);
       }
     }
-    return numberCount; 
+    return numberCount.toFixed(2); 
     
   },
 };
