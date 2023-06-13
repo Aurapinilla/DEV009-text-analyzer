@@ -8,7 +8,7 @@ h1 {
     color:#FEF1E6;
 }
 
-ul {
+.lista {
     columns: 2;
     background-color: #FEF1E6;
     text-align: center;
@@ -18,7 +18,7 @@ ul {
     
 }
 
-li {
+.metricas {
     margin: 10px;
     border: 1.5px solid #1177A3;
     border-style: groove;
