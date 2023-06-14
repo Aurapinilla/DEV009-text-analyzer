@@ -38,6 +38,7 @@ textarea[name="user-input"]{
     border-color: #6E3C00;
     border-radius: 5px;
     border-width: 1.5px;
+    padding: 10px;
 }
 
 #reset-button {
