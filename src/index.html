@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Analizador de texto</title>
+  <title>Analizador de textos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,27 +11,27 @@
   <header>
     <h1>Analizador de Texto</h1>
   </header>
+  <div>
+    <ul class="lista">
 
-  <ul class = "lista">
+      <li class="metricas">Caracteres: 0</li>
+      <li class="metricas">Caracteres Sin Espacios: 0</li>
+      <li class="metricas">Palabras: 0</li>
+      <li class="metricas">Recuento Números: 0</li>
+      <li class="metricas">Suma Números: 0</li>
+      <li class="metricas">Longitud Media Palabras: 0</li>
 
-    <li class = "metricas" >Caracteres: 0</li>
-    <li class = "metricas" >Caracteres Sin Espacios: 0</li>
-    <li class = "metricas" >Palabras: 0</li>
-    <li class = "metricas" >Recuento Números: 0</li>
-    <li class = "metricas" >Suma Números: 0</li>
-    <li class = "metricas" >Longitud Media Palabras: 0</li>
+    </ul>
+  </div>
+  <div class="texto">
+    <textarea name="user-input" rows="8" cols="50" placeholder="Escribe algo..."></textarea>
+    <button id="reset-button">Limpiar Métricas</button>
+  </div>
+  <script src="index.js" type="module"></script>
 
-  </ul>
-
-    <div class="texto">
-      <textarea name= "user-input" rows="8" cols="50" placeholder="Escribe algo..."></textarea>
-    </div>
-
-<br><button id = "reset-button">Limpiar Métricas</button>
-<script src="index.js" type="module"></script>
-
-<footer><p>Autora: Aura Pinilla</p></footer>
+  <footer>
+    <p>Autora: Aura Pinilla</p>
+  </footer>
 </body>
-
 
 </html>

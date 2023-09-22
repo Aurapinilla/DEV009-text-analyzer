@@ -1,29 +1,33 @@
-
+body {
+    margin: 0 auto;
+}
 
 header {
+    margin-top: -20px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 23px;
+    font-size: 20px;
     text-align: center;
     background-color: #09435C;
     color:#FEF1E6;
 }
 
 .lista {
-    columns: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
     background-color: #FEF1E6;
     text-align: center;
-    padding-block: 10px;
-    width: fit-content;
-    margin: 0 auto;
+    margin: 30px 250px;
+    padding: 20px;
+    border-radius: 8px;
     
 }
 
 .metricas {
-    margin: 10px;
+    width:auto;
+    margin: 8px;
     border: 1.5px solid #1177A3;
-    border-style: groove;
-    padding: 8px;
-    width: fit-content;
+    padding: 5px;
     list-style-type: none;
     border-radius: 20px;
     font-size: 15px;
@@ -31,33 +35,47 @@ header {
     background-color: #f5f1f1;
 }
 
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 textarea[name="user-input"]{
-    margin-top: 10px;
-    margin-left: 437px;
     background-color: #f5f1f1;
     border-color: #6E3C00;
     border-radius: 5px;
     border-width: 1.5px;
     padding: 10px;
+    width: 650px;
+    height: 170px;
 }
 
-#reset-button {
+button {
+    padding: 5px;
     text-align: center;
-    margin-block: 20px;
-    margin-left: 580px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     border-radius: 15px;
     background-color: #1177A3;
-    color: #FEF1E6;
-    border-color: #093F57;
+    color: #fffaf6;
+    border-color: #237aa0;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 17px rgba(49, 37, 69, 0.35);
 }
 
 footer {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
     font-style: italic;
-    font-variant: small-caps;
     color: #301E03;
     text-align-last: right;
-    margin: auto 0;
+    padding-right: 20px;
     background-color: #f5f1f1;
 }
