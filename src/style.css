@@ -54,7 +54,7 @@ textarea[name="user-input"]{
     height: 170px;
 }
 
-button {
+#reset-button {
     padding: 5px;
     text-align: center;
     margin-top: 30px;
@@ -65,7 +65,7 @@ button {
     border-color: #237aa0;
 }
 
-button:hover {
+#reset-button:hover {
     cursor: pointer;
     box-shadow: 0 4px 17px rgba(49, 37, 69, 0.35);
 }
